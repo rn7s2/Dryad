@@ -24,6 +24,7 @@ class DVertexProcessStatus;
 class DryadChannelDescription;
 class WorkQueue;
 
+#include <string>
 #include <DrCommon.h>
 #include <errorreporter.h>
 #include <channelparser.h>
