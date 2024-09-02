@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Research.Peloponnese.Client.0.8.1-beta\build\Microsoft.Research.Peloponnese.Client.props" Condition="Exists('..\packages\Microsoft.Research.Peloponnese.Client.0.8.1-beta\build\Microsoft.Research.Peloponnese.Client.props')" />
   <Import Project="..\packages\Microsoft.Research.Peloponnese.AzureStorage.0.8.1-beta\build\Microsoft.Research.Peloponnese.AzureStorage.props" Condition="Exists('..\packages\Microsoft.Research.Peloponnese.AzureStorage.0.8.1-beta\build\Microsoft.Research.Peloponnese.AzureStorage.props')" />
   <Import Project="..\packages\Microsoft.Research.Peloponnese.Utils.0.8.1-beta\build\Microsoft.Research.Peloponnese.Utils.props" Condition="Exists('..\packages\Microsoft.Research.Peloponnese.Utils.0.8.1-beta\build\Microsoft.Research.Peloponnese.Utils.props')" />
   <Import Project="..\packages\Microsoft.Research.Peloponnese.Hadoop.0.8.1-beta\build\Microsoft.Research.Peloponnese.Hadoop.props" Condition="Exists('..\packages\Microsoft.Research.Peloponnese.Hadoop.0.8.1-beta\build\Microsoft.Research.Peloponnese.Hadoop.props')" />
@@ -62,7 +63,6 @@
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Microsoft.Research.Dryad</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Microsoft.Research.Dryad</TargetName>
-    <NuGetPackageImportStamp>46822e65</NuGetPackageImportStamp>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
@@ -231,6 +231,7 @@
     <Import Project="..\packages\Microsoft.Research.Peloponnese.Hadoop.0.8.1-beta\build\Microsoft.Research.Peloponnese.Hadoop.targets" Condition="Exists('..\packages\Microsoft.Research.Peloponnese.Hadoop.0.8.1-beta\build\Microsoft.Research.Peloponnese.Hadoop.targets')" />
     <Import Project="..\packages\Microsoft.Research.Peloponnese.Utils.0.8.1-beta\build\Microsoft.Research.Peloponnese.Utils.targets" Condition="Exists('..\packages\Microsoft.Research.Peloponnese.Utils.0.8.1-beta\build\Microsoft.Research.Peloponnese.Utils.targets')" />
     <Import Project="..\packages\Microsoft.Research.Peloponnese.AzureStorage.0.8.1-beta\build\Microsoft.Research.Peloponnese.AzureStorage.targets" Condition="Exists('..\packages\Microsoft.Research.Peloponnese.AzureStorage.0.8.1-beta\build\Microsoft.Research.Peloponnese.AzureStorage.targets')" />
+    <Import Project="..\packages\Microsoft.Research.Peloponnese.Client.0.8.1-beta\build\Microsoft.Research.Peloponnese.Client.targets" Condition="Exists('..\packages\Microsoft.Research.Peloponnese.Client.0.8.1-beta\build\Microsoft.Research.Peloponnese.Client.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -244,5 +245,7 @@
     <Error Condition="!Exists('..\packages\Microsoft.Research.Peloponnese.Utils.0.8.1-beta\build\Microsoft.Research.Peloponnese.Utils.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Research.Peloponnese.Utils.0.8.1-beta\build\Microsoft.Research.Peloponnese.Utils.targets'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Research.Peloponnese.AzureStorage.0.8.1-beta\build\Microsoft.Research.Peloponnese.AzureStorage.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Research.Peloponnese.AzureStorage.0.8.1-beta\build\Microsoft.Research.Peloponnese.AzureStorage.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Research.Peloponnese.AzureStorage.0.8.1-beta\build\Microsoft.Research.Peloponnese.AzureStorage.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Research.Peloponnese.AzureStorage.0.8.1-beta\build\Microsoft.Research.Peloponnese.AzureStorage.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Research.Peloponnese.Client.0.8.1-beta\build\Microsoft.Research.Peloponnese.Client.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Research.Peloponnese.Client.0.8.1-beta\build\Microsoft.Research.Peloponnese.Client.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Research.Peloponnese.Client.0.8.1-beta\build\Microsoft.Research.Peloponnese.Client.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Research.Peloponnese.Client.0.8.1-beta\build\Microsoft.Research.Peloponnese.Client.targets'))" />
   </Target>
 </Project>
