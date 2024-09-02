@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.Research.Peloponnese.Client.0.8.1-beta\build\Microsoft.Research.Peloponnese.Client.props" Condition="Exists('..\packages\Microsoft.Research.Peloponnese.Client.0.8.1-beta\build\Microsoft.Research.Peloponnese.Client.props')" />
   <Import Project="..\packages\Microsoft.Research.Peloponnese.WebHdfs.0.8.1-beta\build\Microsoft.Research.Peloponnese.WebHdfs.props" Condition="Exists('..\packages\Microsoft.Research.Peloponnese.WebHdfs.0.8.1-beta\build\Microsoft.Research.Peloponnese.WebHdfs.props')" />
   <Import Project="..\packages\Microsoft.Research.Peloponnese.Hadoop.0.8.1-beta\build\Microsoft.Research.Peloponnese.Hadoop.props" Condition="Exists('..\packages\Microsoft.Research.Peloponnese.Hadoop.0.8.1-beta\build\Microsoft.Research.Peloponnese.Hadoop.props')" />
@@ -17,9 +17,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>JobObjectModel</RootNamespace>
     <AssemblyName>JobObjectModel</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>b735dff6</NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
