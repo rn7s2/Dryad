@@ -817,7 +817,7 @@ public:
         while (m_pHead != NULL) {
             TempStringBlock *p = m_pHead;
             m_pHead = m_pHead->Detach();
-            free(p);
+            delete p;
         }
     }
 
