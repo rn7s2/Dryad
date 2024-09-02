@@ -754,6 +754,12 @@ private:
 
     public:
         // We have to provide a matching delete...
+        // C++14 or later
+        inline void operator delete(void *pMem)
+        {
+            free(pMem);
+        }
+
         inline void operator delete(void *pMem, Size_t  blocksize)
         {
             (void)blocksize;
@@ -811,7 +817,7 @@ public:
         while (m_pHead != NULL) {
             TempStringBlock *p = m_pHead;
             m_pHead = m_pHead->Detach();
-            delete p;
+            free(p);
         }
     }
 
